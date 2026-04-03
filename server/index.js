@@ -110,6 +110,13 @@ io.on('connection', (socket) => {
     socket.to(debateId).emit('opponent-typing')
   })
 
+  socket.on('leave-debate', ({ debateId }) => {
+    socket.to(debateId).emit('opponent-disconnected')
+    socket.leave(debateId)
+    socketDebates.delete(socket.id)
+    console.log(`${name} left debate ${debateId}`)
+  })
+
   socket.on('disconnect', () => {
     console.log(`${name} disconnected (${socket.id})`)
     removeFromQueue(socket.id)

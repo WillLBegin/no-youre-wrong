@@ -65,6 +65,7 @@ function DebatePage() {
   }
 
   function handleLeave() {
+    socket.emit('leave-debate', { debateId })
     navigate('/')
   }
 
@@ -79,9 +80,19 @@ function DebatePage() {
         <button className="leave-btn" onClick={handleLeave}>Leave</button>
       </div>
       {opponentDisconnected && (
-        <div className="disconnect-banner">
-          Your opponent disconnected.
-          <button onClick={handleLeave}>Find a new opponent</button>
+        <div className="disconnect-overlay">
+          <div className="disconnect-modal">
+            <h2>Your opponent left the debate</h2>
+            <p>They were wrong.</p>
+            <div className="disconnect-actions">
+              <div className="disconnect-btn home" onClick={() => navigate('/')}>
+                Home
+              </div>
+              <div className="disconnect-btn rematch" onClick={() => navigate('/queue')}>
+                Queue again
+              </div>
+            </div>
+          </div>
         </div>
       )}
       <ChatWindow messages={messages} mySocketId={socket?.id} />
