@@ -1,0 +1,66 @@
+.debate-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #13131a;
+}
+
+.debate-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background: #1a1a28;
+  border-bottom: 1px solid #2a2a3d;
+}
+
+.opponent-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.opponent-label strong {
+  color: #ffa36b;
+}
+
+.you-label {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.leave-btn {
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  border: 1px solid #444;
+  background: transparent;
+  color: #aaa;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.leave-btn:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.disconnect-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.7rem;
+  background: rgba(255, 107, 107, 0.15);
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+.disconnect-banner button {
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  border: 1px solid #ff6b6b;
+  background: transparent;
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
