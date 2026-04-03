@@ -44,23 +44,85 @@
   color: #ff6b6b;
 }
 
-.disconnect-banner {
+.disconnect-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 0.7rem;
-  background: rgba(255, 107, 107, 0.15);
-  color: #ff6b6b;
-  font-size: 0.9rem;
+  z-index: 100;
 }
 
-.disconnect-banner button {
-  padding: 0.3rem 0.8rem;
+.disconnect-modal {
+  background: #1e1e2e;
+  border: 1px solid #2a2a3d;
+  border-radius: 20px;
+  width: 400px;
+  height: 300px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.disconnect-modal h2 {
+  margin: 0 0 0.5rem;
+  color: #f0f0f0;
+  font-size: 1.4rem;
+}
+
+.disconnect-modal p {
+  margin: 0;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.disconnect-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.disconnect-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.5rem;
+  height: 44px;
   border-radius: 50px;
-  border: 1px solid #ff6b6b;
-  background: transparent;
-  color: #ff6b6b;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.disconnect-btn:hover {
+  transform: scale(1.05);
+}
+
+.disconnect-btn.home {
+  border: 1px solid #444;
+  background: transparent;
+  color: #aaa;
+}
+
+.disconnect-btn.home:hover {
+  border-color: #888;
+  color: #f0f0f0;
+}
+
+.disconnect-btn.rematch {
+  border: none;
+  background: linear-gradient(135deg, #ff6b6b, #ffa36b);
+  color: #fff;
+}
+
+.disconnect-btn.rematch:hover {
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.4);
 }
