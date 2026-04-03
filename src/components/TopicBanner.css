@@ -1,0 +1,21 @@
+.topic-banner {
+  text-align: center;
+  padding: 1.2rem 1.5rem;
+  background: #1e1e2e;
+  border-bottom: 1px solid #2a2a3d;
+}
+
+.topic-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.topic-text {
+  margin: 0.4rem 0 0;
+  font-size: 1.3rem;
+  color: #f0f0f0;
+  font-weight: 600;
+}
